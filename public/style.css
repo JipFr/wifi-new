@@ -1,0 +1,100 @@
+
+:root {
+	--body: black;
+	--text: white;
+	--card-1: transparent;
+	--card-2: transparent;
+}
+body {
+	margin: 0;
+	font-family: Arial;
+	background: var(--body);
+	color: var(--text);
+	min-height: calc(100vh - 40px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-bottom: 40px;
+}
+
+.days {
+	width: calc(100% - 80px);
+	margin: auto;
+	margin-top: 50px;
+}
+.day h2 {
+	width: calc(100% - 20px);
+	padding: 10px;
+	background: var(--card-1);
+	margin: 0;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+.day_content {
+	padding: 10px;
+	background: var(--card-2);
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	display: grid;
+	grid-gap: 5px;
+	position: relative;
+}
+
+
+.member_row {
+	display: grid;
+	grid-template-columns: 210px 1fr;
+	grid-gap: 10px;
+}
+
+.member_left {
+	font-size: 20px;
+}
+.member_right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.row_head .member_right {
+	display: grid;
+	grid-template-columns: repeat(24, 1fr);
+	font-size: 10px;
+	position: relative;
+}
+.row_head .member_right span {
+	position: relative;
+}
+.row_head .member_right .line {
+	position: absolute;
+	left: 0;
+	width: 1px;
+	background: var(--text);
+	opacity: .1;
+}
+.line_hori {
+	position: absolute;
+	width: calc(100% - 15px);
+	height: 1px;
+	background: var(--text);
+	opacity: .2;
+}
+.member_timeline {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.member_timeline .time {
+	padding: 5px 1px;
+	background: var(--text);
+	border-radius: 2px;
+	position: absolute;
+	left: 0;
+}
+
+.day_progress {
+	top: 20px;
+}
