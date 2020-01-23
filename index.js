@@ -4,6 +4,7 @@ require("colors");
 const fs = require("fs");
 
 const getConnected = require("./getConnected");
+if(!fs.existsSync("data.json")) fs.writeFileSync("data.json", "{}");
 const data = require("./data.json");
 const minute = 60e3;
 
