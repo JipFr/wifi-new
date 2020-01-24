@@ -171,7 +171,6 @@ function update_lines() {
 	});
 	document.querySelectorAll(".line_hori").forEach(el => {
 		el.style.width = (el.closest(".day_content").scrollWidth - 10) + "px";
-		document.querySelector(".day_content").scrollWidth;
 	})
 }
 
