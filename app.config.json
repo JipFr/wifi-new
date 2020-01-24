@@ -4,7 +4,7 @@
 			"name": "Wifi",
 			"script": "index.js",
 			"watch": true,
-			"ignore_watch": ["logs/*"]
+			"ignore_watch": ["logs/*", "*.json", "data.json"]
 		}
 	]
 }

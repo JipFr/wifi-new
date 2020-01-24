@@ -69,15 +69,13 @@ body {
 	position: absolute;
 	left: 0;
 	width: 1px;
-	background: var(--text);
-	opacity: .1;
+	background: #313131;
 }
 .line_hori {
 	position: absolute;
 	width: calc(100% - 15px);
 	height: 1px;
-	background: var(--text);
-	opacity: .2;
+	background: #313131;
 }
 .member_timeline {
 	position: relative;
@@ -97,4 +95,20 @@ body {
 
 .day_progress {
 	top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+	.days {
+		width: 100%;
+	}
+	.day_content {
+		max-width: 100%;
+		overflow-x: auto;
+	}
+	.member_right {
+		min-width: 1200px;
+	}
+	.device_name {
+		padding-left: 20px;
+	}
 }

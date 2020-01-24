@@ -38,4 +38,4 @@ function get_device_name(device) {
 }
 
 const app = require("./web");
-app.listen(80, () => console.log("Web server is online".bold.blue));
+app.listen(8080, () => console.log("Web server is online".bold.blue));
