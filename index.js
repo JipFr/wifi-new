@@ -1,7 +1,6 @@
 
 require("dotenv").config();
 require("colors");
-const fs = require("fs");
 
 const { MongoClient } = require("mongodb");
 const dbUrl = process.env.db || null;
@@ -49,7 +48,7 @@ const main = async () => {
 			}
 		});
 
-		console.log("Added to", name);
+		console.log("Added time to", name);
 
 		return 1;
 
