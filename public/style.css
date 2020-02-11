@@ -2,6 +2,7 @@
 :root {
 	--body: #eaecec;
 	--text: #191919;
+	--secondary: #797979;
 	--card-1: transparent;
 	--card-2: transparent;
 	--border: rgba(0, 0, 0, 0.1);
@@ -11,6 +12,7 @@
 	body {
 		--body: black;
 		--text: white;
+		--secondary: gray;
 		--card-1: transparent;
 		--card-2: transparent;
 		--border: #313131;
@@ -22,11 +24,12 @@ body {
 	font-family: Arial;
 	background: var(--body);
 	color: var(--text);
-	min-height: calc(100vh - 40px);
+	/*min-height: calc(100vh - 40px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;
+	flex-wrap: wrap;*/
+	border-top: 5px solid #151e5b;
 	padding-bottom: 40px;
 }
 
@@ -59,6 +62,24 @@ body {
 	grid-template-columns: 210px 1fr;
 	grid-gap: 10px;
 }
+
+.member_row .device_name, .member_row .time {
+	transition: 150ms;
+}
+.member_row .device_name {
+	color: var(--secondary);
+}
+.member_row .member_timeline .time {
+	background: var(--secondary);
+}
+
+.member_row:hover .member_timeline .time {
+	background: var(--text);
+}
+.member_row:hover .device_name {
+	color: var(--text);
+}
+
 
 .member_left {
 	font-size: 20px;

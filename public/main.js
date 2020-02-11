@@ -197,6 +197,8 @@ function search(q = "") {
 	update_lines();
 }
 
+window.addEventListener("resize", update_lines);
+
 
 
 main();
