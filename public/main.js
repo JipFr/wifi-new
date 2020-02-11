@@ -34,7 +34,7 @@ async function main() {
 	let mapped_times = {}
 	let days_order = Object.keys(days).reverse();
 	days_order.forEach(key => {
-		console.log("-".repeat(15))
+		// console.log("-".repeat(15))
 		let date_str = key;
 		let macs = days[date_str];
 		Object.entries(macs).forEach(entry => {
@@ -113,7 +113,7 @@ function render() {
 
 			row.querySelector(".device_name").innerHTML = device_name.replace(/-/g, " ");
 
-			console.log(device_times);
+			// console.log(device_times);
 
 			let mapped_times = device_times.map(str => {
 				str = str.split(" ");
@@ -136,7 +136,7 @@ function render() {
 
 				row.querySelector(".member_timeline").appendChild(div);
 
-				console.log(day_start_percentage, day_end_percentage);
+				// console.log(day_start_percentage, day_end_percentage);
 
 			});
 
@@ -166,6 +166,8 @@ function render() {
 }
 
 function update_lines() {
+
+	document.querySelectorAll(".line").forEach(el => el.style.height = 0);
 	document.querySelectorAll(".line").forEach(el => {
 		el.style.height = (el.closest(".day_content").scrollHeight - 30) + "px";
 	});
@@ -174,9 +176,23 @@ function update_lines() {
 	})
 }
 
+function search(q = "") {
 
+	q = q.trim().toLowerCase().split(", ");
 
+	document.querySelectorAll(".device_name").forEach(span => {
+		
+		let txt = span.innerText.trim().toLowerCase();
+		if(!q.find(q_entry => txt.includes(q_entry))) {
+			span.closest(".member_row").classList.add("hidden");
+		} else {
+			span.closest(".member_row").classList.remove("hidden");
+		}
 
+	});
+
+	update_lines();
+}
 
 
 

@@ -4,6 +4,7 @@
 	--text: white;
 	--card-1: transparent;
 	--card-2: transparent;
+	--border: #313131;
 }
 body {
 	margin: 0;
@@ -69,13 +70,13 @@ body {
 	position: absolute;
 	left: 0;
 	width: 1px;
-	background: #313131;
+	background: var(--border);
 }
 .line_hori {
 	position: absolute;
 	width: calc(100% - 15px);
 	height: 1px;
-	background: #313131;
+	background: var(--border);
 }
 .member_timeline {
 	position: relative;
@@ -111,4 +112,24 @@ body {
 	.device_name {
 		padding-left: 20px;
 	}
+}
+
+div.search {
+	width: 100%;
+	max-width: calc(100% - 40px);
+	margin: 20px auto;
+}
+
+input.search {
+	padding: 10px;
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	width: calc(100% - 22px);
+	background: transparent;
+	color: var(--text);
+
+}
+
+.hidden {
+	display: none;
 }
