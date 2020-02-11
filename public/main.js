@@ -163,6 +163,7 @@ function render() {
 		update_lines();
 
 	});
+	search(document.querySelector("input.search").value);
 }
 
 function update_lines() {
@@ -185,7 +186,7 @@ function search(q = "") {
 	document.querySelectorAll(".device_name").forEach(span => {
 		
 		let txt = span.innerText.trim().toLowerCase();
-		if(!q.find(q_entry => txt.includes(q_entry))) {
+		if(!q.find(q_entry => txt.includes(q_entry)) && q[0] !== "") {
 			span.closest(".member_row").classList.add("hidden");
 		} else {
 			span.closest(".member_row").classList.remove("hidden");
