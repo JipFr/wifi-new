@@ -7,6 +7,7 @@
 	--card-2: transparent;
 	--border: rgba(0, 0, 0, 0.1);
 	--now: green;
+	--main: #151e5b;
 }
 @media (prefers-color-scheme: dark) {
 	body {
@@ -17,6 +18,7 @@
 		--card-2: transparent;
 		--border: #313131;
 		--now: yellow;
+		--main: #5855ff;
 	}
 }
 body {
@@ -29,7 +31,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;*/
-	border-top: 5px solid #151e5b;
+	border-top: 5px solid var(--main);
 	padding-bottom: 40px;
 }
 

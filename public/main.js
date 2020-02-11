@@ -95,7 +95,7 @@ function get_time_obj(str) {
 
 
 function render() {
-	Object.keys(days).reverse().forEach(date_str => {
+	for(let date_str of Object.keys(days).reverse()) {
 		let date = extract_date(date_str);
 
 		let content = document.querySelector("template.day").content;
@@ -161,10 +161,11 @@ function render() {
 
 		document.querySelector(".days").appendChild(day_el);
 		update_lines();
-
-	});
+	}
 	search(document.querySelector("input.search").value);
 }
+
+const sleep = async ms => new Promise(resolve => setTimeout(resolve, ms));
 
 function update_lines() {
 
