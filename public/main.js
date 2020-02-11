@@ -154,8 +154,8 @@ function render() {
 			let day_current_percentage = (into_day / total_day_minutes) * 100;
 				
 			day_progress.style.left = `calc(${day_current_percentage}%)`;
-			day_progress.style.background = "yellow";
 			day_progress.style.opacity = 1;
+			day_progress.classList.add("now");
 			day_el.querySelector(".member_right").insertBefore(day_progress, day_el.querySelector(".member_right").children[0]);
 
 

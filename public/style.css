@@ -1,10 +1,21 @@
 
 :root {
-	--body: black;
-	--text: white;
+	--body: #eaecec;
+	--text: #191919;
 	--card-1: transparent;
 	--card-2: transparent;
-	--border: #313131;
+	--border: rgba(0, 0, 0, 0.1);
+	--now: green;
+}
+@media (prefers-color-scheme: dark) {
+	body {
+		--body: black;
+		--text: white;
+		--card-1: transparent;
+		--card-2: transparent;
+		--border: #313131;
+		--now: yellow;
+	}
 }
 body {
 	margin: 0;
@@ -116,7 +127,7 @@ body {
 
 div.search {
 	width: 100%;
-	max-width: calc(100% - 40px);
+	max-width: calc(100% - 100px);
 	margin: 20px auto;
 }
 
@@ -127,9 +138,14 @@ input.search {
 	width: calc(100% - 22px);
 	background: transparent;
 	color: var(--text);
-
+	-webkit-appearance: none;
+	font-size: 1rem;
 }
 
 .hidden {
 	display: none;
+}
+
+.row_head .member_right .line.now {
+	background: var(--now);
 }
