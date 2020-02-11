@@ -35,6 +35,7 @@ const main = async () => {
 			await collection.updateOne({ name }, {
 				$set: {
 					name,
+					device,
 					times: []
 				}
 			}, {

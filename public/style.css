@@ -63,22 +63,7 @@ body {
 	grid-gap: 10px;
 }
 
-.member_row .device_name, .member_row .time {
-	transition: 150ms;
-}
-.member_row .device_name {
-	color: var(--secondary);
-}
-.member_row .member_timeline .time {
-	background: var(--secondary);
-}
 
-.member_row:hover .member_timeline .time {
-	background: var(--text);
-}
-.member_row:hover .device_name {
-	color: var(--text);
-}
 
 
 .member_left {
@@ -145,6 +130,26 @@ body {
 		padding-left: 20px;
 	}
 }
+
+@media (hover: hover) {
+	.member_row .device_name, .member_row .time {
+		transition: 150ms;
+	}
+	.member_row .device_name {
+		color: var(--secondary);
+	}
+	.member_row .member_timeline .time {
+		background: var(--secondary);
+	}
+
+	.member_row:hover .member_timeline .time {
+		background: var(--text);
+	}
+	.member_row:hover .device_name {
+		color: var(--text);
+	}
+}
+
 
 div.search {
 	width: 100%;
